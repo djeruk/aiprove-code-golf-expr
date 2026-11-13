@@ -1,1 +1,1 @@
-module.exports.evalExpr=eval
+exports.evalExpr=s=>{s=s.replace(/\s/g,'');let i=0,e=()=>{let v=t();while('+-'.includes(s[i]))v=s[i++]=='+'?v+t():v-t();return v},t=()=>{let v=f();while('*/'.includes(s[i]))v=s[i++]=='*'?v*f():v/f();return v},f=()=>s[i]=='('?(i++,v=e(),i++,v):s[i]=='-'?(i++,-f()):(m=/[\d.]+/.exec(s.slice(i))[0],i+=m.length,+m);return e()}
