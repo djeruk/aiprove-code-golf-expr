@@ -1,1 +1,1 @@
-this.evalExpr=eval
+exports.evalExpr=eval
